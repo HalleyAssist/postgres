@@ -657,7 +657,7 @@ AC_LINK_IFELSE([AC_LANG_PROGRAM([#include <arm_acle.h>],
 CFLAGS="$pgac_save_CFLAGS"])
 if test x"$Ac_cachevar" = x"yes"; then
   CFLAGS_CRC="$1"
-  pgac_armv8_crc32c_intrinsics=yes
+  pgac_armv8_crc32c_intrinsics=no
 fi
 undefine([Ac_cachevar])dnl
 ])# PGAC_ARMV8_CRC32C_INTRINSICS
