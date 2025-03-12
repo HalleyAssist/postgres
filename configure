@@ -18768,7 +18768,7 @@ fi
 $as_echo "$pgac_cv_armv8_crc32c_intrinsics_" >&6; }
 if test x"$pgac_cv_armv8_crc32c_intrinsics_" = x"yes"; then
   CFLAGS_ARMV8_CRC32C=""
-  pgac_armv8_crc32c_intrinsics=yes
+  pgac_armv8_crc32c_intrinsics=no
 fi
 
 if test x"$pgac_armv8_crc32c_intrinsics" != x"yes"; then
@@ -18809,7 +18809,7 @@ fi
 $as_echo "$pgac_cv_armv8_crc32c_intrinsics__march_armv8_apcrcpsimd" >&6; }
 if test x"$pgac_cv_armv8_crc32c_intrinsics__march_armv8_apcrcpsimd" = x"yes"; then
   CFLAGS_ARMV8_CRC32C="-march=armv8-a+crc+simd"
-  pgac_armv8_crc32c_intrinsics=yes
+  pgac_armv8_crc32c_intrinsics=no
 fi
 
   if test x"$pgac_armv8_crc32c_intrinsics" != x"yes"; then
@@ -18850,7 +18850,7 @@ fi
 $as_echo "$pgac_cv_armv8_crc32c_intrinsics__march_armv8_apcrc" >&6; }
 if test x"$pgac_cv_armv8_crc32c_intrinsics__march_armv8_apcrc" = x"yes"; then
   CFLAGS_ARMV8_CRC32C="-march=armv8-a+crc"
-  pgac_armv8_crc32c_intrinsics=yes
+  =yes
 fi
 
   fi
