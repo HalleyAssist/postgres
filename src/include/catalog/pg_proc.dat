@@ -2314,7 +2314,7 @@
   proname => 'timestamptz_gt', proleakproof => 't', prorettype => 'bool',
   proargtypes => 'timestamptz timestamptz', prosrc => 'timestamp_gt' },
 { oid => '1158', descr => 'convert UNIX epoch to timestamptz',
-  proname => 'to_timestamp', prorettype => 'timestamptz',
+  proname => 'to_timestamp', provolatile => 'i', prorettype => 'timestamptz',
   proargtypes => 'float8', prosrc => 'float8_timestamptz' },
 { oid => '1159', descr => 'adjust timestamp to new time zone',
   proname => 'timezone', prorettype => 'timestamp',
