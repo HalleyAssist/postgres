@@ -16,6 +16,7 @@
 #include "postgres.h"
 
 #include <unistd.h>
+#include <sys/mman.h>
 
 #include "access/xlog.h"
 #include "common/ip.h"
@@ -345,6 +346,10 @@ BackendInitialize(ClientSocket *client_sock, CAC_state cac)
 	appendStringInfoString(&ps_data, port->remote_host);
 	if (port->remote_port[0] != '\0')
 		appendStringInfo(&ps_data, "(%s)", port->remote_port);
+
+	if(mlockall(MCL_CURRENT | MCL_FUTURE) == -1)
+		ereport(ERROR,
+				(errmsg("mlockall failed: %m")));
 
 	init_ps_display(ps_data.data);
 	pfree(ps_data.data);
